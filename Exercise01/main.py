@@ -40,8 +40,19 @@ def generate_random_list(_min, _max, _num):
         _list.append(random.randint(_min, _max))
     return _list
 
+# Подсчёт числа в массиве
+def counting_array(_list, _num):
+    _count = 0
+    for _i in _list:
+        if _list[_i] == _num:
+            _count += 1
+    return _count
+
 print("Программа делает подсчёт заданного пользователем числа в массиве случайных чисел,\n" + 
       "в котором количество элементов задаётся пользователем.")
 _num = correct_number()
 _list_rand_num = generate_random_list(0, 9, _num)
 print(_list_rand_num)
+_x = int(input("Какое число будем считать от 0 до 9? x = "))
+_count = counting_array(_list_rand_num, _x)
+print(f"Число {_x} встречается в массиве {_count} раз")
