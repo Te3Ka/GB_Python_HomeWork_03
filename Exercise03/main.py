@@ -41,5 +41,36 @@ def author():
     print('79811131773@yandex.ru')
     print('****************************')
 
+def points_scrabble(_word):
+    _points = 0
+    _word = _word.lower()
+    for _i in _word:
+        if _i == 'a' or _i == 'e' or _i == 'i' or _i == 'o' or _i == 'l' or \
+           _i == 'n' or _i == 's' or _i == 't' or _i == 'r' or \
+           _i == 'а' or _i == 'в' or _i == 'е' or _i == 'и' or _i == 'н' or \
+           _i == 'о' or _i == 'р' or _i == 'с' or _i == 'т':
+            _points += 1
+        elif _i == 'd' or _i == 'g' or \
+             _i == 'д' or _i == 'к' or _i == 'л' or _i == 'м' or _i == 'п' or _i == 'у':
+            _points += 2
+        elif _i == "b" or _i == 'c' or _i == 'm' or _i == 'p' or \
+             _i == 'б' or _i == 'г' or _i == 'ё' or _i == 'ь' or _i == 'я':
+            _points += 3
+        elif _i == 'f' or _i == "h" or _i == 'v' or _i == 'w' or _i == 'y' or \
+             _i == 'й' or _i == 'ы':
+            _points += 4
+        elif _i == 'k' or \
+             _i == 'ж' or _i == 'з' or _i == 'х' or _i == 'ц' or _i == 'ч':
+            _points += 5
+        elif _i == "j" or _i == 'x' or \
+             _i == 'ш' or _i == 'э' or _i == 'ю':
+            _points += 8
+        elif _i == 'q' or _i == 'z' or \
+             _i == 'ф' or _i == 'щ' or _i == 'ъ':
+            _points += 10
+    return _points
+
 print("Программа считает количество очков введённого слова для игры Scrabble по классическим правилам игры")
 _word = str(input("Введите русское или английское слово (только одно!) = "))
+_points = points_scrabble(_word)
+print(f"В слове {_word} по правилам Scrabble {_points} очков")
