@@ -43,7 +43,7 @@ def generate_random_list(_min, _max, _num):
 # Подсчёт числа в массиве
 def counting_array(_list, _num):
     _count = 0
-    for _i in _list:
+    for _i in range(len(_list)):
         if _list[_i] == _num:
             _count += 1
     return _count
