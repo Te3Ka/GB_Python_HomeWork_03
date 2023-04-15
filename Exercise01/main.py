@@ -56,3 +56,5 @@ print(_list_rand_num)
 _x = int(input("Какое число будем считать от 0 до 9? x = "))
 _count = counting_array(_list_rand_num, _x)
 print(f"Число {_x} встречается в массиве {_count} раз")
+
+author()
