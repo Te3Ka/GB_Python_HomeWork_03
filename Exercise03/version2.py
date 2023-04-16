@@ -63,9 +63,11 @@ _word = _word.lower()
 print(_word)
 for _letter in _word:
     if _letter in alphabet_english:
-        print("english")
+        _points += alphabet_english[_letter]
     elif _letter in alphabet_russian:
-        print("russian")
+        _points += alphabet_russian[_letter]
     else:
         print("Неизвестный алфавит")
 print(_points)
+
+author()
